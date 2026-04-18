@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
+    const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html') || window.location.pathname === '';
+    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
-        } else {
+        } else if (isHomePage) {
             navbar.classList.remove('scrolled');
         }
     });
@@ -27,12 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Apply stagger delay if it's part of a group
-                if (entry.target.parentElement.classList.contains('services-grid') || 
-                    entry.target.parentElement.style.display === 'grid') {
-                    const children = Array.from(entry.target.parentElement.children);
+                // Apply stagger delay if it's part of a grid group
+                const parent = entry.target.parentElement;
+                const parentStyle = window.getComputedStyle(parent);
+                if (parentStyle.display === 'grid' || parentStyle.display === 'flex') {
+                    const children = Array.from(parent.children).filter(child => child.hasAttribute('data-aos') || child.classList.contains('glass-card') || child.classList.contains('project-card'));
                     const childIndex = children.indexOf(entry.target);
-                    entry.target.style.transitionDelay = (childIndex * 0.15) + 's';
+                    if (childIndex !== -1) {
+                        entry.target.style.transitionDelay = (childIndex * 0.1) + 's';
+                    }
                 }
                 
                 entry.target.classList.add('aos-animate');

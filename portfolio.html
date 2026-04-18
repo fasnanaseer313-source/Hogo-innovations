@@ -9,52 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
-        }
-        .project-card {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 400px;
-        }
-        .project-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 30px;
-            opacity: 0;
-            transition: 0.4s;
-        }
-        .project-card:hover img {
-            transform: scale(1.1);
-        }
-        .project-card:hover .project-overlay {
-            opacity: 1;
-        }
-    </style>
 </head>
 <body>
 
     <nav id="navbar" class="scrolled">
         <a href="index.html" class="logo">
-            <i class="fas fa-microchip"></i>
+            <img src="assets/images/hogo_main_logo_transparent.png" alt="Hogo Innovations Logo" class="nav-logo-img">
             HOGO <span>INNOVATIONS</span>
         </a>
         <ul class="nav-links">
@@ -69,11 +29,11 @@
         </div>
     </nav>
 
-    <section style="padding-top: 150px; text-align: center;">
+    <section class="page-header">
         <div data-aos>
             <span class="section-tag">Our Work</span>
             <h1 class="gradient-text">Success Stories</h1>
-            <p style="color: var(--text-muted);">Explore some of our most prestigious automation projects across Kerala.</p>
+            <p>Explore some of our most prestigious automation projects across Kerala.</p>
         </div>
     </section>
 
@@ -83,7 +43,7 @@
             <div class="project-card" data-aos>
                 <img src="assets/images/hero_automation_bg_1776113027445.png" alt="Luxury Villa Kozhikode">
                 <div class="project-overlay">
-                    <span style="color: var(--primary); font-weight: 700;">RESIDENTIAL</span>
+                    <span class="project-tag">RESIDENTIAL</span>
                     <h3>The Azure Villa</h3>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Full home automation & smart security system.</p>
                 </div>
@@ -93,7 +53,7 @@
             <div class="project-card" data-aos>
                 <img src="assets/images/service_solar_image_1776113086224.png" alt="Solar Project">
                 <div class="project-overlay">
-                    <span style="color: var(--primary); font-weight: 700;">GREEN ENERGY</span>
+                    <span class="project-tag">GREEN ENERGY</span>
                     <h3>Eco-Tech Estate</h3>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">10kW Solar plant with automated cleaning system.</p>
                 </div>
@@ -103,27 +63,45 @@
             <div class="project-card" data-aos>
                 <img src="assets/images/service_cctv_image_1776113042680.png" alt="Corporate Security">
                 <div class="project-overlay">
-                    <span style="color: var(--primary); font-weight: 700;">COMMERCIAL</span>
+                    <span class="project-tag">COMMERCIAL</span>
                     <h3>HiLITE Business Hub</h3>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Advanced CCTV monitoring & Biometric access.</p>
                 </div>
             </div>
 
-            <!-- Project 4 -->
-            <div class="project-card" data-aos>
-                <img src="assets/images/service_lighting_image_1776113102510.png" alt="Smart Lighting Project">
-                <div class="project-overlay">
-                    <span style="color: var(--primary); font-weight: 700;">LIGHTING</span>
-                    <h3>Modern Loft Setup</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">App-controlled dynamic mood lighting.</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <footer style="padding: 60px 5% 40px; background: #020406; border-top: 1px solid var(--glass-border);">
-        <div style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">
-            &copy; 2024 Hogo Innovations. All Rights Reserved.
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <img src="assets/images/hogo_main_logo_transparent.png" alt="Hogo Innovations Logo" class="footer-logo-img">
+                </a>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">Leading the way in smart automation solutions in Kozhikode, Kerala. Innovation. Safety. Excellence.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Phase 2, 2nd Floor, HiLITE Business Park, Kozhikode, Kerala</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 89211 22814</li>
+                    <li><i class="fas fa-envelope"></i> hogoinnovations39@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Hogo Innovations. All Rights Reserved. Crafted for Future.
         </div>
     </footer>
 
