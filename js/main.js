@@ -106,4 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Feature Card Mobile Touch Interaction
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Remove active class from all other cards to ensure only one is active at a time (like hover)
+            featureCards.forEach(c => {
+                if(c !== this) c.classList.remove('active-touch');
+            });
+            // Toggle the clicked card
+            this.classList.toggle('active-touch');
+        });
+    });
+
 });

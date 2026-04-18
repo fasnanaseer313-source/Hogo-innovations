@@ -180,6 +180,24 @@ nav.scrolled {
 @media (max-width: 768px) {
     .mobile-toggle {
         display: block;
+        margin-left: auto;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        gap: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100vw - 80px); /* Leave room for hamburger */
+    }
+
+    .nav-logo-img {
+        height: 36px;
+    }
+
+    nav.scrolled .nav-logo-img {
+        height: 30px;
     }
 
     .nav-links {
@@ -1052,7 +1070,8 @@ section {
     transition: 0.5s;
 }
 
-.feature-card:hover::before {
+.feature-card:hover::before,
+.feature-card.active-touch::before {
     background: linear-gradient(to bottom, rgba(5, 7, 10, 0.7), rgba(0, 132, 255, 0.15));
 }
 
@@ -1087,14 +1106,16 @@ section {
     font-weight: 300;
 }
 
-.feature-card:hover {
+.feature-card:hover,
+.feature-card.active-touch {
     transform: translateY(-15px) scale(1.02);
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--primary);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 132, 255, 0.2);
 }
 
-.feature-card:hover .feature-icon {
+.feature-card:hover .feature-icon,
+.feature-card.active-touch .feature-icon {
     background: var(--primary);
     color: white;
     transform: rotateY(180deg);
