@@ -532,6 +532,36 @@ section {
     color: var(--secondary);
 }
 
+/* Service Image Overlay */
+.service-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+    opacity: 1; /* Always visible to match reference */
+}
+
+.overlay-title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 480px) {
+    .overlay-title {
+        font-size: 1.4rem;
+    }
+}
+
 /* Service Showcase Sections */
 .service-showcase {
     padding: 100px 5%;
@@ -1209,53 +1239,6 @@ section {
         filter: brightness(1.2) !important;
     }
 }
-
-/* Smart Glass Interactive Effect */
-.smart-glass-container {
-    position: relative;
-    cursor: crosshair;
-    overflow: hidden;
-}
-
-.smart-glass-img {
-    transition: filter 1s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s ease !important;
-}
-
-.smart-glass-card:hover .smart-glass-img {
-    filter: blur(15px) brightness(1.1) !important;
-}
-
-.smart-glass-overlay {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.mode-label {
-    background: rgba(0, 132, 255, 0.8);
-    backdrop-filter: blur(5px);
-    color: white;
-    padding: 6px 15px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    width: fit-content;
-}
-
-.mode-label.on { opacity: 1; transform: translateX(0); }
-.mode-label.off { opacity: 0; transform: translateX(-20px); position: absolute; top: 0; left: 0; }
-
-.smart-glass-card:hover .mode-label.on { opacity: 0; transform: translateX(20px); }
-.smart-glass-card:hover .mode-label.off { opacity: 1; transform: translateX(0); }
 
 /* Features / Why Choose Us Section */
 .features-grid {
