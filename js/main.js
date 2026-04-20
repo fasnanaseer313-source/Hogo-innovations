@@ -118,5 +118,36 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.toggle('active-touch');
         });
     });
+});
 
+
+    // Service Flip Card Interaction
+    const serviceCards = document.querySelectorAll('.service-detail-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Un-flip others
+            serviceCards.forEach(c => {
+                if(c !== this) c.classList.remove('active');
+            });
+            // Toggle this one
+            this.classList.toggle('active');
+        });
+    });
+
+    // Video Hover Play/Pause Logic
+    const videoHoverCards = document.querySelectorAll('.video-hover-card');
+    videoHoverCards.forEach(card => {
+        const video = card.querySelector('.card-video');
+        if (video) {
+            card.addEventListener('mouseenter', () => {
+                video.play().catch(error => {
+                    console.log("Video play failed:", error);
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0; // Optional: Reset video to start
+            });
+        }
+    });
 });
