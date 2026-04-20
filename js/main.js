@@ -118,9 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.toggle('active-touch');
         });
     });
-});
-
-
     // Service Flip Card Interaction
     const serviceCards = document.querySelectorAll('.service-detail-card');
     serviceCards.forEach(card => {
@@ -134,20 +131,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Video Hover Play/Pause Logic
+    // Video Hover Play/Pause Logic (Desktop & Mobile)
     const videoHoverCards = document.querySelectorAll('.video-hover-card');
     videoHoverCards.forEach(card => {
         const video = card.querySelector('.card-video');
         if (video) {
-            card.addEventListener('mouseenter', () => {
-                video.play().catch(error => {
-                    console.log("Video play failed:", error);
-                });
-            });
+            // Desktop Hover
+            card.addEventListener('mouseenter', () => video.play().catch(() => {}));
             card.addEventListener('mouseleave', () => {
                 video.pause();
-                video.currentTime = 0; // Optional: Reset video to start
+                video.currentTime = 0;
             });
+
+            // Mobile Touch Toggle
+            card.addEventListener('touchstart', (e) => {
+                if (video.paused) {
+                    video.play().catch(() => {});
+                    card.classList.add('touch-playing');
+                } else {
+                    video.pause();
+                    card.classList.remove('touch-playing');
+                }
+            }, {passive: true});
         }
     });
+
 });
