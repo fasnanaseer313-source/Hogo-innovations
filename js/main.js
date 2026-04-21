@@ -156,4 +156,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Floating Review Us Toggle
+    const reviewsSection = document.getElementById('testimonials');
+    const floatingReviewBtn = document.getElementById('floating-review-trigger');
+    
+    if (reviewsSection && floatingReviewBtn) {
+        const reviewObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    floatingReviewBtn.classList.add('show');
+                } else {
+                    floatingReviewBtn.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        reviewObserver.observe(reviewsSection);
+    }
+
 });

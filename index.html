@@ -65,9 +65,12 @@
         
         <div class="services-grid">
             <!-- 1. Home Automation -->
-            <div class="glass-card service-card" data-aos>
+            <div class="glass-card service-card video-hover-card" data-aos>
                 <div class="service-img-container">
-                    <img src="assets/images/home_automation_main_1776113116340.png" alt="Home Automation">
+                    <img src="assets/images/home_automation_main_1776113116340.png" alt="Home Automation" class="card-poster">
+                    <video class="card-video" muted loop playsinline>
+                        <source src="assets/videos/home_automation_animation.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="service-info">
                     <i class="fas fa-home"></i>
@@ -95,12 +98,15 @@
             </div>
 
             <!-- 3. Automatic Shutters -->
-            <div class="glass-card service-card" data-aos>
+            <div class="glass-card service-card video-hover-card" data-aos>
                 <div class="service-img-container">
-                    <img src="assets/images/shutter_automation_v5.png" alt="Automatic Shutters">
+                    <img src="assets/images/shutter_automation_final.png" alt="Automatic Shutters" class="card-poster">
                     <div class="service-image-overlay">
                         <span class="overlay-title">Shutter Automation</span>
                     </div>
+                    <video class="card-video" muted loop playsinline>
+                        <source src="assets/videos/shutter_automation_animation.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="service-info">
                     <i class="fas fa-scroll"></i>
@@ -110,12 +116,15 @@
             </div>
 
             <!-- 4. Smart Door Lock -->
-            <div class="glass-card service-card" data-aos>
+            <div class="glass-card service-card video-hover-card" data-aos>
                 <div class="service-img-container">
-                    <img src="assets/images/digital_door_lock_premium.png" alt="Smart Door Lock">
+                    <img src="assets/images/digital_door_lock_premium.png" alt="Smart Door Lock" class="card-poster">
                     <div class="service-image-overlay">
                         <span class="overlay-title">Smart Door Lock</span>
                     </div>
+                    <video class="card-video" muted loop playsinline>
+                        <source src="assets/videos/smart_door_lock_animation.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="service-info">
                     <i class="fas fa-lock"></i>
@@ -169,53 +178,84 @@
             <h2 class="section-title">What They Say</h2>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div class="glass-card" style="padding: 40px;" data-aos>
-                <div style="color: var(--primary); margin-bottom: 20px;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Hogo Innovations transformed our home into a futuristic sanctuary. The security systems are flawless. Highly recommended!"</p>
-                <div class="testimonial-user">
-                    <div class="user-avatar-placeholder"></div>
-                    <div>
-                        <h4 style="font-size: 1rem;">Rahul Nair</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Kozhikode Resident</p>
+        <div class="testimonials-slider-container">
+            <div id="testimonials-slider" class="testimonials-slider">
+                <!-- Feedback 1 -->
+                <div class="glass-card testimonial-card" data-aos>
+                    <div style="color: var(--primary); margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Hogo Innovations transformed our home into a futuristic sanctuary. The security systems are flawless. Highly recommended!"</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Rahul Nair</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Kozhikode Resident</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="glass-card" style="padding: 40px;" data-aos>
-                <div style="color: var(--primary); margin-bottom: 20px;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"The solar cleaning system they installed is a game changer. Our panel efficiency has increased by 30%. Professional team and great support."</p>
-                <div class="testimonial-user">
-                    <div class="user-avatar-placeholder"></div>
-                    <div>
-                        <h4 style="font-size: 1rem;">Anjali Menon</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Eco-Villa Owner</p>
+                <!-- Feedback 2 -->
+                <div class="glass-card testimonial-card" data-aos>
+                    <div style="color: var(--primary); margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"The solar cleaning system they installed is a game changer. Our panel efficiency has increased by 30%. Professional team and great support."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Anjali Menon</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Eco-Villa Owner</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="glass-card" style="padding: 40px;" data-aos>
-                <div style="color: var(--primary); margin-bottom: 20px;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <!-- Feedback 3 -->
+                <div class="glass-card testimonial-card" data-aos>
+                    <div style="color: var(--primary); margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Exceptional service for our commercial office setup. The biometric system is fast and reliable. Best automation partner in Kerala."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Sameer Ahmed</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Tech Startup CEO</p>
+                        </div>
+                    </div>
                 </div>
-                <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Exceptional service for our commercial office setup. The biometric system is fast and reliable. Best automation partner in Kerala."</p>
-                <div class="testimonial-user">
-                    <div class="user-avatar-placeholder"></div>
-                    <div>
-                        <h4 style="font-size: 1rem;">Sameer Ahmed</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Tech Startup CEO</p>
+
+                <!-- Feedback 4 -->
+                <div class="glass-card testimonial-card" data-aos>
+                    <div style="color: var(--primary); margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"Best smart glass installation in Calicut. The transparency control is incredible. A total futuristic upgrade for our office pods."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar-placeholder"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Kiran Das</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Architect</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 50px;" data-aos>
-            <a href="https://search.google.com/local/writereview?placeid=ChIJXwAAAKBZbjkRfzFDqFJVfFs" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 10px;">
-                Review Us <i class="fas fa-arrow-right"></i>
+
+        <!-- Floating Review Button -->
+        <a href="https://search.google.com/local/writereview?placeid=ChIJXwAAAKBZbjkRfzFDqFJVfFs" target="_blank" id="floating-review-trigger" class="floating-review-btn">
+            <i class="fas fa-pen-fancy"></i>
+            <span class="review-tooltip">How's your experience? Review Us</span>
+        </a>
+
+        <div style="text-align: center; margin-top: 40px;" data-aos>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJXwAAAKBZbjkRfzFDqFJVfFs" target="_blank" class="premium-review-btn">
+                <span>Review Us on Google</span>
+                <i class="fas fa-arrow-right"></i>
             </a>
+            <div style="margin-top: 20px; color: var(--text-muted); font-size: 0.8rem;">
+                <i class="fas fa-mouse-pointer" style="margin-right: 5px;"></i> Scroll horizontally to view more feedbacks
+            </div>
         </div>
     </section>
 
@@ -266,17 +306,8 @@
     <div class="section-divider"></div>
 
     <!-- Final CTA -->
-    <section class="final-cta final-cta-section">
-        <div class="glass-panel" style="padding: 80px 40px; border-radius: 40px; text-align: center;" data-aos>
-            <h2 class="section-title">Let’s Build Your <span class="gradient-text">Smart Space</span></h2>
-            <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-muted);">Transform your property into an intelligent ecosystem today.</p>
-            <div class="cta-group">
-                <a href="contact.html" class="btn btn-primary">Consult Our Experts</a>
-                <a href="https://wa.me/918921122814" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Chat Now</a>
-            </div>
-        </div>
-    </section>
-
+    <!-- Trusted By Industry Leaders Section -->
+    <!-- Trusted By Industry Leaders Section -->
     <!-- Trusted By Industry Leaders Section -->
     <section class="trusted-section">
         <div class="section-header" data-aos>
@@ -285,82 +316,104 @@
             <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Delivering smart automation solutions to leading brands and businesses across India.</p>
         </div>
 
-        <div class="brands-grid-premium">
+        <div class="brands-grid-v2">
             <!-- The Raviz Kadavu -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/raviz_logo_vibrant_1776335034520.png" alt="The Raviz Kadavu Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=theraviz.com&sz=128" alt="The Raviz Kadavu">
                 </div>
+                <span class="brand-name" style="color: white;">The Raviz Kadavu</span>
             </div>
 
             <!-- KSEB -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/kseb_logo_individual_1776333751444.png" alt="KSEB Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=kseb.in&sz=128" alt="KSEB">
                 </div>
+                <span class="brand-name" style="color: white;">KSEB</span>
             </div>
 
             <!-- Nesto -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/nesto_logo_individual_1776333783649.png" alt="Nesto Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=nestohyper.com&sz=128" alt="Nesto">
                 </div>
+                <span class="brand-name" style="color: white;">Nesto Hypermarket</span>
             </div>
 
-            <!-- Speakeasy -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/speakeasy_logo_individual_1776333812594.png" alt="Speakeasy Logo">
+            <!-- Speakeazy -->
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=speakeazyacademy.com&sz=128" alt="Speakeazy">
                 </div>
+                <span class="brand-name" style="color: white;">Speakeazy Academy</span>
             </div>
 
-            <!-- MRPL Pump -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/mrpl_logo_individual_1776333839588.png" alt="MRPL Pump Logo">
+            <!-- MRPL -->
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=mrpl.co.in&sz=128" alt="MRPL">
                 </div>
+                <span class="brand-name" style="color: white;">MRPL</span>
             </div>
 
             <!-- HP -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/hp_logo_individual_1776334060925.png" alt="HP Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=hp.com&sz=128" alt="HP">
                 </div>
+                <span class="brand-name" style="color: white;">HP Global</span>
             </div>
 
             <!-- Paratha -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/paratha_logo_individual_1776334009805.png" alt="Paratha Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=parathako.com&sz=128" alt="Paratha">
                 </div>
+                <span class="brand-name" style="color: white;">Paratha Restaurant</span>
             </div>
 
             <!-- Shadowfax -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/shadowfax_vibrant_logo_1776335117673.png" alt="Shadowfax Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=shadowfax.in&sz=128" alt="Shadowfax">
                 </div>
+                <span class="brand-name" style="color: white;">Shadowfax Logistics</span>
             </div>
 
             <!-- KMCT -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/kmct_logo_individual_1776333956686.png" alt="KMCT Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=kmct.edu.in&sz=128" alt="KMCT">
                 </div>
+                <span class="brand-name" style="color: white;">KMCT Institutions</span>
             </div>
 
             <!-- Nakshathra Gold -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/nakshathra_logo_individual_1776333926018.png" alt="Nakshathra Gold Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=nakshathragold.com&sz=128" alt="Nakshathra">
                 </div>
+                <span class="brand-name" style="color: white;">Nakshathra Gold</span>
             </div>
 
             <!-- SBI -->
-            <div class="brand-premium-card" data-aos>
-                <div class="brand-logo-container">
-                    <img src="assets/images/brands/sbi_logo_individual_1776334107289.png" alt="SBI Logo">
+            <div class="brand-card-v2" data-aos>
+                <div class="brand-logo-box">
+                    <img src="https://www.google.com/s2/favicons?domain=sbi.co.in&sz=128" alt="SBI">
                 </div>
+                <span class="brand-name" style="color: white;">State Bank of India</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta final-cta-section">
+        <div class="glass-panel" style="padding: 80px 40px; border-radius: 40px; text-align: center;" data-aos>
+            <h2 class="section-title">Let’s Build Your <span class="gradient-text">Smart Space</span></h2>
+            <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-muted);">Transform your property into an intelligent ecosystem today.</p>
+            <div class="cta-group">
+                <a href="contact.html" class="btn btn-primary">Consult Our Experts</a>
+                <a href="https://wa.me/918921122814" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Chat Now</a>
             </div>
         </div>
     </section>

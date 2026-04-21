@@ -612,6 +612,18 @@ section {
     font-size: 0.9rem;
     text-align: center;
 }
+.image-highlight-card.secondary {
+    right: auto;
+    left: -20px;
+    bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .image-highlight-card.secondary {
+        left: 0;
+        bottom: 80px;
+    }
+}
 
 .showcase-text h2 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -1353,4 +1365,267 @@ nav.scrolled .nav-logo-img {
     object-fit: contain;
     margin-bottom: 20px;
     background: transparent;
+}
+
+/* Testimonials Slider */
+.testimonials-slider-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding: 20px;
+    overflow: visible;
+}
+
+.testimonials-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 30px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.testimonials-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.testimonials-slider .testimonial-card {
+    flex: 0 0 calc(33.333% - 20px);
+    width: 350px;
+    scroll-snap-align: center;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonials-slider .testimonial-card:hover {
+    transform: scale(1.02);
+}
+
+/* Floating Review Button */
+.floating-review-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), #00d2ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 132, 255, 0.4);
+    z-index: 999;
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-review-btn.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.floating-review-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 15px 40px rgba(0, 132, 255, 0.6);
+}
+
+.review-tooltip {
+    position: absolute;
+    right: 80px;
+    background: var(--card-bg);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.floating-review-btn:hover .review-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+    .testimonials-slider .testimonial-card {
+        flex: 0 0 calc(50% - 15px);
+        width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-slider {
+        gap: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .testimonials-slider .testimonial-card {
+        flex: 0 0 280px; /* Standardize width */
+        aspect-ratio: 1 / 1; /* Force square shape */
+        height: 280px; /* Match height for perfect square */
+        padding: 25px !important;
+        margin-bottom: 0;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        scroll-snap-align: center;
+    }
+
+    .testimonials-slider .testimonial-card p {
+        font-size: 0.85rem; /* Slightly smaller text to fit square */
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Limit lines to keep it neat */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .floating-review-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Premium Review Button Below slider */
+.premium-review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0.1), rgba(0, 210, 255, 0.1));
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(100px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: btnPop 3s infinite ease-in-out;
+}
+
+.premium-review-btn i {
+    transition: transform 0.4s ease;
+}
+
+.premium-review-btn:hover {
+    background: linear-gradient(135deg, var(--primary), #00d2ff);
+    color: white !important;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 132, 255, 0.3);
+    border-color: transparent;
+}
+
+.premium-review-btn:hover i {
+    transform: translateX(8px);
+}
+
+@keyframes btnPop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@media (max-width: 768px) {
+    .premium-review-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Brand Grid V2 - Proper Presentation */
+.trusted-section {
+    padding: 100px 0;
+    background: rgba(255,255,255,0.02);
+}
+
+.brands-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+}
+
+.brand-card-v2 {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(10px);
+}
+
+.brand-card-v2:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.brand-logo-box {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.brand-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .brands-grid-v2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .brand-logo-box {
+        width: 90px;
+        height: 90px;
+        padding: 15px;
+    }
+    
+    .brand-name {
+        font-size: 0.85rem;
+    }
 }
