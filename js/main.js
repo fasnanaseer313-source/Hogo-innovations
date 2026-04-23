@@ -74,11 +74,51 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
         });
     });
+
+    // Handle incoming hash from other pages
+    const handleHash = () => {
+        const hash = window.location.hash;
+        if (hash) {
+            // Wait a bit for AOS and other layout to settle
+            setTimeout(() => {
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                    
+                    // Add highlight effect
+                    target.classList.add('service-highlight');
+                    
+                    // Optional: Play video if it's a video card
+                    const video = target.querySelector('.card-video');
+                    if (video) video.play().catch(() => {});
+
+                    // Remove highlight after animation
+                    setTimeout(() => {
+                        target.classList.remove('service-highlight');
+                    }, 6000);
+                }
+            }, 500);
+        }
+    };
+
+    // Check on load
+    handleHash();
+
+    // Check on hash change (if already on page)
+    window.addEventListener('hashchange', handleHash);
 
     // Handle Mobile Logic (if added later)
     const mobileToggle = document.querySelector('.mobile-toggle');
