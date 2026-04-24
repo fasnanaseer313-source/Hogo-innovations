@@ -2219,3 +2219,171 @@ nav.scrolled .nav-logo-img {
     transform: rotateY(180deg);
 }
 
+/* Trusted Section V2 - Black & Blue Theme */
+.trusted-section-v2 {
+    background: #000000;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.trusted-section-v2 .v2-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 80px;
+    letter-spacing: -1.5px;
+}
+
+.trusted-section-v2 .v2-title .text-blue {
+    color: var(--primary); /* Use website primary blue */
+}
+
+.trusted-section-v2 .v2-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .trusted-section-v2 .v2-logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .trusted-section-v2 .v2-logo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+    }
+}
+
+.v2-logo-card {
+    background: #ffffff;
+    border-radius: 16px;
+    aspect-ratio: 16 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.v2-logo-card:hover {
+    transform: translateY(-10px);
+}
+
+.v2-logo-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Brand Marquee Section */
+.brands-marquee-section {
+    background: #000000;
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.brands-marquee-section .brands-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 5%;
+}
+
+.brands-marquee-section .brands-header h2 {
+    color: #ffffff;
+}
+
+.brands-marquee-section .brands-header p {
+    color: var(--text-muted);
+}
+
+.marquee-container {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 50px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    gap: 50px;
+    min-width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 50px));
+    }
+}
+
+/* Pause on hover for better UX */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    flex-shrink: 0;
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.marquee-item:hover {
+    transform: scale(1.1);
+}
+
+.marquee-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: none; /* Always show original colors */
+    opacity: 1; /* Always fully visible */
+    transition: all 0.3s ease;
+}
+
+/* Responsive Marquee */
+@media (max-width: 768px) {
+    .marquee-item {
+        width: 140px;
+        height: 80px;
+        padding: 15px;
+    }
+    .marquee-content {
+        gap: 30px;
+        animation-duration: 30s;
+    }
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - 30px));
+        }
+    }
+}
+
+.legrand-logo {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 8px;
+    padding: 12px !important;
+}
