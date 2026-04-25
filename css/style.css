@@ -946,14 +946,33 @@ section {
 /* Animations */
 [data-aos] {
     opacity: 0;
-    transform: translateY(30px);
-    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(50px);
+    transition: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform, opacity;
 }
 
 [data-aos].aos-animate {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Specific Animation Variants */
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+[data-aos="fade-up-stagger"] {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
 
 /* Floating Elements */
 .whatsapp-float {
@@ -1787,7 +1806,17 @@ nav.scrolled .nav-logo-img {
 }
 
 .premium-review-btn i {
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 0 10px rgba(0, 132, 255, 0.4));
+    font-size: 1.1rem;
+    color: white;
+    background: var(--primary);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .premium-review-btn:hover {
@@ -1800,6 +1829,9 @@ nav.scrolled .nav-logo-img {
 
 .premium-review-btn:hover i {
     transform: translateX(8px);
+    background: white;
+    color: var(--primary);
+    filter: drop-shadow(0 0 15px white);
 }
 
 @keyframes btnPop {
