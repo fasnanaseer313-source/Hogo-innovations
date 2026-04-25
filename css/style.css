@@ -2304,6 +2304,7 @@ nav.scrolled .nav-logo-img {
 }
 
 /* Trusted Section V2 - Black & Blue Theme */
+/* Trusted Section V2 - Black & Blue Theme */
 .trusted-section-v2 {
     background: #000000;
     padding: 100px 5%;
@@ -2319,62 +2320,26 @@ nav.scrolled .nav-logo-img {
 }
 
 .trusted-section-v2 .v2-title .text-blue {
-    color: var(--primary); /* Use website primary blue */
+    color: var(--primary);
 }
 
 .trusted-section-v2 .v2-logo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-@media (max-width: 480px) {
-    .trusted-section-v2 .v2-logo-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-        padding: 0 5px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .trusted-section-v2 {
-        padding: 60px 15px 120px 15px; /* Added bottom padding to avoid WhatsApp float overlap */
-    }
-    .trusted-section-v2 .v2-title {
-        margin-bottom: 40px;
-        font-size: 2.2rem;
-    }
-    .v2-logo-card {
-        padding: 15px !important;
-        border-radius: 12px !important;
-    }
-}
-
-@media (min-width: 768px) {
-    .trusted-section-v2 .v2-logo-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .trusted-section-v2 .v2-logo-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 35px;
-    }
-}
-
 .v2-logo-card {
     background: #ffffff;
-    border-radius: 16px;
-    aspect-ratio: 1.4 / 1;
+    border-radius: 12px;
+    aspect-ratio: 1.6 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 20px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     width: 100%;
@@ -2384,12 +2349,12 @@ nav.scrolled .nav-logo-img {
 }
 
 .v2-logo-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 132, 255, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 132, 255, 0.2);
 }
 
 .v2-logo-card img {
-    max-width: 80%;
+    max-width: 85%;
     max-height: 80%;
     width: auto;
     height: auto;
@@ -2399,6 +2364,33 @@ nav.scrolled .nav-logo-img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .trusted-section-v2 {
+        padding: 60px 15px 120px 15px;
+    }
+    .trusted-section-v2 .v2-title {
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+    }
+    .trusted-section-v2 .v2-logo-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px !important;
+    }
+    .v2-logo-card {
+        padding: 10px !important;
+        border-radius: 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .trusted-section-v2 .v2-logo-grid {
+        gap: 8px !important;
+    }
+    .v2-logo-card {
+        padding: 6px !important;
+    }
 }
 
 /* Brand Marquee Section */
