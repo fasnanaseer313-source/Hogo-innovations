@@ -214,4 +214,129 @@ document.addEventListener('DOMContentLoaded', () => {
         reviewObserver.observe(reviewsSection);
     }
 
+
+    // --- INTERACTIVE SERVICES MARQUEE ---
+    const serviceMarquee = document.querySelector('.services-marquee-section .marquee-container');
+    const serviceTrack = document.querySelector('.services-marquee-section .marquee-track');
+
+    if (serviceMarquee && serviceTrack) {
+        let isInteracting = false;
+        let scrollSpeed = 0.8; 
+        let currentPos = serviceMarquee.scrollLeft;
+        let resumeTimeout;
+
+        // Auto-scroll animation
+        const autoScroll = () => {
+            if (!isInteracting) {
+                currentPos += scrollSpeed;
+                serviceMarquee.scrollLeft = Math.floor(currentPos);
+                
+                // Infinite Loop Reset
+                if (serviceMarquee.scrollLeft >= serviceTrack.scrollWidth / 2) {
+                    currentPos = 0;
+                    serviceMarquee.scrollLeft = 0;
+                }
+            } else {
+                // Sync currentPos when manually scrolling/dragging
+                currentPos = serviceMarquee.scrollLeft;
+            }
+            requestAnimationFrame(autoScroll);
+        };
+        requestAnimationFrame(autoScroll);
+
+        // Hover/Touch Pause Controls
+        const pauseScroll = () => { isHovered = true; };
+        const resumeScroll = () => {
+            isHovered = false;
+            isDown = false;
+            currentPos = serviceMarquee.scrollLeft; // Re-sync
+        };
+
+        serviceMarquee.addEventListener('mouseenter', pauseScroll);
+        serviceMarquee.addEventListener('mouseleave', resumeScroll);
+
+        serviceMarquee.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - serviceMarquee.offsetLeft;
+            scrollLeftPos = serviceMarquee.scrollLeft;
+            serviceMarquee.style.cursor = 'grabbing';
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDown = false;
+            if (serviceMarquee) serviceMarquee.style.cursor = 'grab';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - serviceMarquee.offsetLeft;
+            const walk = (x - startX) * 2;
+            serviceMarquee.scrollLeft = scrollLeftPos - walk;
+            
+            if (serviceMarquee.scrollLeft <= 0) {
+                serviceMarquee.scrollLeft = serviceTrack.scrollWidth / 2;
+                startX = e.pageX - serviceMarquee.offsetLeft;
+                scrollLeftPos = serviceMarquee.scrollLeft;
+            } else if (serviceMarquee.scrollLeft >= serviceTrack.scrollWidth / 2) {
+                serviceMarquee.scrollLeft = 0;
+                startX = e.pageX - serviceMarquee.offsetLeft;
+                scrollLeftPos = serviceMarquee.scrollLeft;
+            }
+        });
+
+        // Wheel Support
+        serviceMarquee.addEventListener('wheel', (e) => {
+            if (isHovered) {
+                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.preventDefault();
+                    serviceMarquee.scrollLeft += e.deltaY;
+                } else {
+                    e.preventDefault();
+                    serviceMarquee.scrollLeft += e.deltaX;
+                }
+                
+                if (serviceMarquee.scrollLeft <= 0) {
+                    serviceMarquee.scrollLeft = serviceTrack.scrollWidth / 2;
+                } else if (serviceMarquee.scrollLeft >= serviceTrack.scrollWidth / 2) {
+                    serviceMarquee.scrollLeft = 0;
+                }
+                currentPos = serviceMarquee.scrollLeft;
+            }
+        }, { passive: false });
+
+        // Touch Support (Mobile)
+        serviceMarquee.addEventListener('touchstart', (e) => {
+            isDown = true;
+            isHovered = true;
+            startX = e.touches[0].pageX - serviceMarquee.offsetLeft;
+            scrollLeftPos = serviceMarquee.scrollLeft;
+        }, { passive: true });
+
+        serviceMarquee.addEventListener('touchend', () => {
+            isDown = false;
+            // Resume auto-scroll after 3 seconds of inactivity
+            setTimeout(() => {
+                if (!isDown) isHovered = false;
+            }, 3000);
+        }, { passive: true });
+
+        serviceMarquee.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - serviceMarquee.offsetLeft;
+            const walk = (x - startX) * 1.5; 
+            serviceMarquee.scrollLeft = scrollLeftPos - walk;
+            
+            if (serviceMarquee.scrollLeft <= 0) {
+                serviceMarquee.scrollLeft = serviceTrack.scrollWidth / 2;
+                startX = e.touches[0].pageX - serviceMarquee.offsetLeft;
+                scrollLeftPos = serviceMarquee.scrollLeft;
+            } else if (serviceMarquee.scrollLeft >= serviceTrack.scrollWidth / 2) {
+                serviceMarquee.scrollLeft = 0;
+                startX = e.touches[0].pageX - serviceMarquee.offsetLeft;
+                scrollLeftPos = serviceMarquee.scrollLeft;
+            }
+            currentPos = serviceMarquee.scrollLeft;
+        }, { passive: true });
+    }
 });

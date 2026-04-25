@@ -471,38 +471,44 @@ section {
 
 /* Services Marquee Section */
 .services-marquee-section {
-    padding: 100px 0;
-    background: var(--bg-dark);
-    overflow: hidden;
+    padding: 120px 0;
     position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(10, 13, 18, 0.82), rgba(10, 13, 18, 0.72)), url('../assets/images/alexa_services_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     z-index: 1;
 }
 
-.services-marquee-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    filter: blur(8px);
-    z-index: -1;
-}
-
-.services-marquee-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, transparent 0%, var(--bg-dark) 90%);
-    z-index: -1;
+@media (max-width: 768px) {
+    .services-marquee-section {
+        padding: 80px 0;
+        background-attachment: scroll;
+        background-image: linear-gradient(rgba(10, 13, 18, 0.75), rgba(10, 13, 18, 0.65)), url('../assets/images/alexa_services_bg.png');
+    }
 }
 
 .marquee-container {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
     padding: 30px 0;
     position: relative;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-y;
+    scroll-behavior: auto !important; /* Ensure JS scroll is instant */
+}
+
+.marquee-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+.marquee-container:active {
+    cursor: grabbing;
 }
 
 /* Gradient mask for smooth edges */
@@ -531,11 +537,7 @@ section {
     display: flex;
     gap: 30px;
     width: max-content;
-    animation: marqueeScroll 35s linear infinite;
-}
-
-.marquee-track:hover {
-    animation-play-state: paused;
+    will-change: transform;
 }
 
 @keyframes marqueeScroll {
@@ -1073,7 +1075,6 @@ section {
     padding-top: 150px;
     padding-bottom: 80px;
     text-align: center;
-    background: linear-gradient(to bottom, #0a0d12, var(--bg-dark));
 }
 
 .page-header h1 {
@@ -2441,7 +2442,7 @@ nav.scrolled .nav-logo-img {
 /* About & Mission Background Section */
 .about-vision-section {
     position: relative;
-    background-image: linear-gradient(rgba(5, 7, 10, 0.95), rgba(5, 7, 10, 0.88)), url('../assets/images/smart_home_bg_v1.png');
+    background-image: linear-gradient(rgba(5, 7, 10, 0.6), rgba(5, 7, 10, 0.4)), url('../assets/images/smart_home_bg_v1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2463,7 +2464,8 @@ nav.scrolled .nav-logo-img {
 
 @media (max-width: 768px) {
     .about-vision-section {
-        background-attachment: scroll; /* Disable parallax on mobile for performance */
+        background-attachment: scroll !important;
+        background-image: linear-gradient(rgba(5, 7, 10, 0.5), rgba(5, 7, 10, 0.3)), url('../assets/images/smart_home_bg_v1.png');
     }
 }
 
@@ -2471,7 +2473,7 @@ nav.scrolled .nav-logo-img {
 .page-header {
     position: relative;
     padding: 120px 5% 80px;
-    background-image: linear-gradient(rgba(5, 7, 10, 0.9), rgba(5, 7, 10, 0.8)), url('../assets/images/services_bg.png');
+    background-image: linear-gradient(rgba(5, 7, 10, 0.7), rgba(5, 7, 10, 0.5)), url('../assets/images/services_bg.png');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -2550,5 +2552,160 @@ nav.scrolled .nav-logo-img {
     .feature-card {
         min-height: 350px;
         padding: 40px 20px;
+    }
+}
+
+/* ELV Solution Expert Banner */
+.elv-banner-container {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 15px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.elv-banner {
+    padding: 22px 60px;
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0.08), rgba(0, 80, 255, 0.12));
+    border: 1px solid rgba(0, 132, 255, 0.3);
+    border-radius: 100px;
+    box-shadow: 0 15px 45px rgba(0, 132, 255, 0.12), inset 0 0 20px rgba(0, 132, 255, 0.05);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: default;
+}
+
+.elv-banner h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #a5d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 132, 255, 0.3);
+}
+
+.elv-banner:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0.15), rgba(0, 100, 255, 0.2));
+    box-shadow: 0 25px 60px rgba(0, 132, 255, 0.3);
+    border-color: rgba(0, 132, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .elv-banner-container {
+        margin-top: -20px;
+        padding: 10px 5%;
+    }
+    .elv-banner {
+        padding: 15px 30px;
+        border-radius: 30px;
+    }
+    .elv-banner h3 {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        line-height: 1.4;
+    }
+}
+
+/* ELV Service Icons */
+.elv-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.elv-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.elv-icon-box {
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(5px);
+}
+
+.elv-icon-box i {
+    font-size: 1.6rem;
+    color: #ffffff;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.elv-icon-item span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.elv-icon-item:hover .elv-icon-box {
+    border-color: rgba(0, 132, 255, 0.6);
+    background: rgba(0, 132, 255, 0.1);
+    transform: translateY(-8px) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(0, 132, 255, 0.2);
+}
+
+.elv-icon-item:hover i {
+    color: var(--primary);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.elv-icon-item:hover span {
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .elv-icons-container {
+        gap: 10px;
+        margin-bottom: 35px;
+        flex-wrap: nowrap; /* Force single line */
+        justify-content: space-between;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    .elv-icon-item {
+        flex: 1;
+        min-width: 0;
+        gap: 8px;
+    }
+    .elv-icon-box {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        border-width: 1px;
+    }
+    .elv-icon-box i {
+        font-size: 1rem;
+    }
+    .elv-icon-item span {
+        font-size: 0.5rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        transform: scale(0.9);
     }
 }
