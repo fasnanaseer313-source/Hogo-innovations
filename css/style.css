@@ -2801,3 +2801,21 @@ nav.scrolled .nav-logo-img {
         transform: scale(0.9);
     }
 }
+
+/* Fix for blue phone numbers on iPhone/Mobile */
+a[href^="tel"] {
+    color: var(--text-white) !important;
+    text-decoration: none !important;
+}
+
+.footer-contact li,
+.contact-item p {
+    color: var(--text-white) !important;
+}
+
+/* Keep icons blue as they were */
+.footer-contact i,
+.contact-item i {
+    color: var(--primary) !important;
+}
+
