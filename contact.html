@@ -15,7 +15,9 @@
 
     <nav id="navbar" class="scrolled">
         <a href="index.html" class="logo">
-            <img src="assets/images/hogo_main_logo_transparent.png" alt="Hogo Innovations Logo" class="nav-logo-img">
+            <div class="logo-icon-card">
+                <img src="assets/images/hogo_main_logo_transparent.png" alt="Hogo Innovations Logo" class="nav-logo-img">
+            </div>
             HOGO <span>INNOVATIONS</span>
         </a>
         <ul class="nav-links">
@@ -97,11 +99,41 @@
                         </div>
                         <input type="tel" placeholder="Phone Number" class="form-input">
                         <select class="form-select">
-                            <option value="">Select Service</option>
-                            <option value="automation">Home Automation</option>
-                            <option value="cctv">CCTV Surveillance</option>
-                            <option value="biometric">Biometric Systems</option>
-                            <option value="solar">Solar Systems</option>
+                            <option value="" disabled selected>Select Service</option>
+                            
+                            <optgroup label="Automation & Smart Living">
+                                <option value="automation">Home Automation</option>
+                                <option value="smart-glass">Smart Glass</option>
+                                <option value="mist-cooling">Mist Cooling System</option>
+                                <option value="stretch-ceiling">Stretch Ceiling System</option>
+                            </optgroup>
+                            
+                            <optgroup label="Security & Surveillance">
+                                <option value="cctv">CCTV Surveillance</option>
+                                <option value="security-alarm">Security Alarm System</option>
+                                <option value="video-door-phone">Video Door Phone</option>
+                                <option value="smart-lock">Smart Door Lock</option>
+                                <option value="access-control">Time Attendance & Access Control</option>
+                            </optgroup>
+                            
+                            <optgroup label="Access & Parking Control">
+                                <option value="gate-automation">Gate Automation</option>
+                                <option value="shutters">Automatic Shutters</option>
+                                <option value="boom-barrier">Boom Barrier</option>
+                                <option value="egate">E-gate System</option>
+                                <option value="bollard">Bollard</option>
+                                <option value="parking-lock">Automatic Parking Lock</option>
+                            </optgroup>
+                            
+                            <optgroup label="IT & Communication">
+                                <option value="network">Network Infrastructure</option>
+                                <option value="epabx">EPABX System</option>
+                            </optgroup>
+                            
+                            <optgroup label="Sustainable Energy">
+                                <option value="solar">Solar Power System</option>
+                                <option value="solar-cleaning">Solar Cleaning System</option>
+                            </optgroup>
                         </select>
                         <textarea placeholder="Tell us about your project..." class="form-textarea"></textarea>
                         <button type="submit" class="btn btn-primary" style="border: none;">Send Message</button>
