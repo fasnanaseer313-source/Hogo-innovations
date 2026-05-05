@@ -3131,3 +3131,61 @@ a[href^="tel"] {
 .video-hover-card:hover .glass-status {
     opacity: 0;
 }
+/* iPhone Specific Fixes & Optimizations */
+@supports (padding: env(safe-area-inset-top)) {
+    nav {
+        padding-top: calc(15px + env(safe-area-inset-top));
+    }
+    
+    .nav-links {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .hero {
+        padding-top: calc(80px + env(safe-area-inset-top));
+    }
+
+    .whatsapp-float, .floating-review-btn {
+        bottom: calc(30px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Refined responsiveness for smaller iPhones (375px and below) */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .elv-banner h3 {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .elv-icons-container {
+        gap: 5px;
+    }
+
+    .elv-icon-box {
+        width: 36px;
+        height: 36px;
+    }
+
+    .elv-icon-item span {
+        font-size: 0.45rem;
+    }
+}
+
+/* Ensure no horizontal scroll on any iPhone */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent zoom on input focus for iOS */
+input, select, textarea {
+    font-size: 16px !important;
+}
