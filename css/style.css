@@ -1377,17 +1377,38 @@ section {
 }
 
 .stat-item h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     color: var(--primary);
     margin: 0;
+    font-weight: 800;
 }
 
 .stat-item p {
     color: var(--text-muted);
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        gap: 30px;
+    }
+
+    .stat-item h2 {
+        font-size: 2.2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .stat-icon {
+        font-size: 1.8rem;
+    }
 }
 
 /* Contact Component */
