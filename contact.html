@@ -92,52 +92,57 @@
             <!-- Contact Form -->
             <div data-aos>
                 <div class="glass-panel contact-card">
-                    <form action="#" class="form-glass">
+                    <form id="contactForm" action="https://formsubmit.co/ajax/hogoinnovations39@gmail.com" method="POST" class="form-glass">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        
                         <div class="input-row">
-                            <input type="text" placeholder="Your Name" class="form-input">
-                            <input type="email" placeholder="Your Email" class="form-input">
+                            <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                            <input type="email" name="email" placeholder="Your Email" class="form-input" required>
                         </div>
-                        <input type="tel" placeholder="Phone Number" class="form-input">
-                        <select class="form-select">
+                        <input type="tel" name="phone" placeholder="Phone Number" class="form-input" required>
+                        <select name="service" class="form-select" required>
                             <option value="" disabled selected>Select Service</option>
                             
                             <optgroup label="Automation & Smart Living">
-                                <option value="automation">Home Automation</option>
-                                <option value="home-theatre">Home Theatre</option>
-                                <option value="smart-glass">Smart Glass</option>
-                                <option value="mist-cooling">Mist Cooling System</option>
-                                <option value="stretch-ceiling">Stretch Ceiling System</option>
+                                <option value="Home Automation">Home Automation</option>
+                                <option value="Home Theatre">Home Theatre</option>
+                                <option value="Smart Glass">Smart Glass</option>
+                                <option value="Mist Cooling System">Mist Cooling System</option>
+                                <option value="Stretch Ceiling System">Stretch Ceiling System</option>
                             </optgroup>
                             
                             <optgroup label="Security & Surveillance">
-                                <option value="cctv">CCTV Surveillance</option>
-                                <option value="security-alarm">Security Alarm System</option>
-                                <option value="video-door-phone">Video Door Phone</option>
-                                <option value="smart-lock">Smart Door Lock</option>
-                                <option value="access-control">Time Attendance & Access Control</option>
+                                <option value="CCTV Surveillance">CCTV Surveillance</option>
+                                <option value="Security Alarm System">Security Alarm System</option>
+                                <option value="Video Door Phone">Video Door Phone</option>
+                                <option value="Smart Door Lock">Smart Door Lock</option>
+                                <option value="Time Attendance & Access Control">Time Attendance & Access Control</option>
                             </optgroup>
                             
                             <optgroup label="Access & Parking Control">
-                                <option value="gate-automation">Gate Automation</option>
-                                <option value="shutters">Automatic Shutters</option>
-                                <option value="boom-barrier">Boom Barrier</option>
-                                <option value="egate">E-gate System</option>
-                                <option value="bollard">Bollard</option>
-                                <option value="parking-lock">Automatic Parking Lock</option>
+                                <option value="Gate Automation">Gate Automation</option>
+                                <option value="Automatic Shutters">Automatic Shutters</option>
+                                <option value="Boom Barrier">Boom Barrier</option>
+                                <option value="E-gate System">E-gate System</option>
+                                <option value="Bollard">Bollard</option>
+                                <option value="Automatic Parking Lock">Automatic Parking Lock</option>
                             </optgroup>
                             
                             <optgroup label="IT & Communication">
-                                <option value="network">Network Infrastructure</option>
-                                <option value="epabx">EPABX System</option>
+                                <option value="Network Infrastructure">Network Infrastructure</option>
+                                <option value="EPABX System">EPABX System</option>
                             </optgroup>
                             
                             <optgroup label="Sustainable Energy">
-                                <option value="solar">Solar Power System</option>
-                                <option value="solar-cleaning">Solar Cleaning System</option>
+                                <option value="Solar Power System">Solar Power System</option>
+                                <option value="Solar Cleaning System">Solar Cleaning System</option>
                             </optgroup>
                         </select>
-                        <textarea placeholder="Tell us about your project..." class="form-textarea"></textarea>
-                        <button type="submit" class="btn btn-primary" style="border: none;">Send Message</button>
+                        <textarea name="message" placeholder="Tell us about your project..." class="form-textarea" required></textarea>
+                        <button type="submit" id="submitBtn" class="btn btn-primary" style="border: none;">Send Message</button>
+                        <div id="form-status" style="margin-top: 15px; display: none; padding: 10px; border-radius: 8px; text-align: center; font-weight: 600;"></div>
                     </form>
                 </div>
             </div>

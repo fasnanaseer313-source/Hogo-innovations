@@ -339,4 +339,64 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPos = serviceMarquee.scrollLeft;
         }, { passive: true });
     }
+
+    // --- CONTACT FORM SUBMISSION LOGIC ---
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('form-status');
+            
+            // Change button text and disable it
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+            statusDiv.style.display = 'none';
+
+            const formData = new FormData(contactForm);
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! We will get back to you soon.';
+                    statusDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
+                    statusDiv.style.color = '#28a745';
+                    statusDiv.style.border = '1px solid #28a745';
+                    statusDiv.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            statusDiv.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Oops! There was a problem submitting your form.';
+                        }
+                        statusDiv.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+                        statusDiv.style.color = '#dc3545';
+                        statusDiv.style.border = '1px solid #dc3545';
+                        statusDiv.style.display = 'block';
+                    });
+                }
+            })
+            .catch(error => {
+                statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Oops! There was a problem submitting your form.';
+                statusDiv.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+                statusDiv.style.color = '#dc3545';
+                statusDiv.style.border = '1px solid #dc3545';
+                statusDiv.style.display = 'block';
+            })
+            .finally(() => {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
 });
