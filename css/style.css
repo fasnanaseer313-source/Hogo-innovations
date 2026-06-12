@@ -589,7 +589,7 @@ section {
     cursor: grabbing;
 }
 
-/* Gradient mask for smooth edges */
+/* Gradient mask for smooth edges - Hidden as it clashes with background images */
 .marquee-container::before,
 .marquee-container::after {
     content: '';
@@ -600,6 +600,7 @@ section {
     height: 100%;
     z-index: 10;
     pointer-events: none;
+    display: none;
 }
 
 .marquee-container::before {
