@@ -1,0 +1,25 @@
+# Robots.txt for Hogo Innovations
+# https://hogoinnovations.com
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Specific Google crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: Googlebot-Video
+Allow: /assets/videos/
+
+# Disallow non-essential files
+Disallow: /__pycache__/
+Disallow: /scratch/
+Disallow: /*.py$
+Disallow: /Screenshots/
+
+# Sitemap
+Sitemap: https://hogoinnovations.com/sitemap.xml

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://hogoinnovations.com/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hogoinnovations.com/assets/images/hogo_main_logo_transparent.png</image:loc>
+      <image:title>Hogo Innovations Logo - Smart Home Automation Kozhikode</image:title>
+      <image:caption>Hogo Innovations - Leading Smart Home Automation and Security Company in Kozhikode, Kerala</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://hogoinnovations.com/services.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hogoinnovations.com/assets/images/home_automation_main_1776113116340.png</image:loc>
+      <image:title>Smart Home Automation Services Kozhikode</image:title>
+      <image:caption>Home Automation, CCTV, Gate Automation, Smart Locks and 20+ Services in Kerala</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://hogoinnovations.com/about.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hogoinnovations.com/assets/images/home_automation_about.png</image:loc>
+      <image:title>About Hogo Innovations</image:title>
+      <image:caption>Pioneering the Smart Revolution in Kozhikode, Kerala - 6+ Years of Excellence</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://hogoinnovations.com/contact.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Brands Page -->
+  <url>
+    <loc>https://hogoinnovations.com/brands.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Testimonials Page -->
+  <url>
+    <loc>https://hogoinnovations.com/testimonials.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>
