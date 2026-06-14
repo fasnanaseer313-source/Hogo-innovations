@@ -1,9 +1,14 @@
 # Robots.txt for Hogo Innovations
-# https://hogoinnovations.com
+# https://www.hogoinnovations.com
 
 # Allow all search engines
 User-agent: *
 Allow: /
+Disallow: /__pycache__/
+Disallow: /scratch/
+Disallow: /*.py$
+Disallow: /Screenshots/
+Disallow: /temp_knx.html
 
 # Specific Google crawlers
 User-agent: Googlebot
@@ -14,12 +19,6 @@ Allow: /assets/images/
 
 User-agent: Googlebot-Video
 Allow: /assets/videos/
-
-# Disallow non-essential files
-Disallow: /__pycache__/
-Disallow: /scratch/
-Disallow: /*.py$
-Disallow: /Screenshots/
 
 # Sitemap
 Sitemap: https://www.hogoinnovations.com/sitemap.xml

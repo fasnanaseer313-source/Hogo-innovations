@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  
-  <!-- Homepage - Highest Priority -->
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ==================== -->
+  <!-- Homepage              -->
+  <!-- ==================== -->
   <url>
     <loc>https://www.hogoinnovations.com/</loc>
     <lastmod>2026-06-14</lastmod>
@@ -11,12 +12,54 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.hogoinnovations.com/assets/images/hogo_main_logo_transparent.png</image:loc>
-      <image:title>Hogo Innovations Logo - Smart Home Automation Kozhikode</image:title>
+      <image:title>Hogo Innovations Logo</image:title>
       <image:caption>Hogo Innovations - Leading Smart Home Automation and Security Company in Kozhikode, Kerala</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/hero_automation_bg_1776113027445.png</image:loc>
+      <image:title>Smart Home Automation Hero</image:title>
+      <image:caption>Smart living starts here - advanced ELV and smart automation solutions by Hogo Innovations</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/home_automation_main_1776113116340.png</image:loc>
+      <image:title>Home Automation Service</image:title>
+      <image:caption>Smart home automation with climate control, voice control, and IoT integration in Kozhikode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/cctv_ai_premium_v3.png</image:loc>
+      <image:title>CCTV Surveillance</image:title>
+      <image:caption>HD CCTV surveillance with AI motion detection and remote access in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/shutter_automation_final.png</image:loc>
+      <image:title>Automatic Shutters</image:title>
+      <image:caption>Automated rolling shutters for garages and commercial fronts in Kozhikode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/digital_door_lock_premium.png</image:loc>
+      <image:title>Smart Door Lock</image:title>
+      <image:caption>Keyless entry smart door lock with fingerprint and PIN access in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/service_solar_image_1776113086224.png</image:loc>
+      <image:title>Solar Power System</image:title>
+      <image:caption>Rooftop solar panel installation and sustainable energy solutions in Kozhikode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/home_theatre_premium.png</image:loc>
+      <image:title>Home Theatre</image:title>
+      <image:caption>Premium home theatre setup with surround sound and smart lighting in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/parking_lock_remote.png</image:loc>
+      <image:title>Parking Lock System</image:title>
+      <image:caption>Automatic remote control parking lock for private parking spaces</image:caption>
+    </image:image>
   </url>
-  
-  <!-- Services Page -->
+
+  <!-- ==================== -->
+  <!-- Services Page         -->
+  <!-- ==================== -->
   <url>
     <loc>https://www.hogoinnovations.com/services.html</loc>
     <lastmod>2026-06-14</lastmod>
@@ -24,12 +67,109 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.hogoinnovations.com/assets/images/home_automation_main_1776113116340.png</image:loc>
-      <image:title>Smart Home Automation Services Kozhikode</image:title>
-      <image:caption>Home Automation, CCTV, Gate Automation, Smart Locks and 20+ Services in Kerala</image:caption>
+      <image:title>Home Automation Service Kozhikode</image:title>
+      <image:caption>Smart home automation with climate management, voice control, and IoT integration</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/cctv_ai_premium_v3.png</image:loc>
+      <image:title>CCTV Surveillance Installation</image:title>
+      <image:caption>HD CCTV monitoring with AI motion detection and night vision in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/gate_automation_premium_final.jpg</image:loc>
+      <image:title>Gate Automation</image:title>
+      <image:caption>Sliding, roller, and arm-type automatic gate systems in Kozhikode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/shutter_automation_final.png</image:loc>
+      <image:title>Automatic Shutters</image:title>
+      <image:caption>Motorized rolling shutters for commercial and residential properties</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/video_door_phone_3d_1776682238061.png</image:loc>
+      <image:title>Video Door Phone</image:title>
+      <image:caption>Crystal-clear video intercom with two-way communication for home security</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/digital_door_lock_premium.png</image:loc>
+      <image:title>Smart Door Lock</image:title>
+      <image:caption>Keyless entry with fingerprint, PIN, and remote smartphone access</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/access_control_premium_v2.png</image:loc>
+      <image:title>Time Attendance and Access Control</image:title>
+      <image:caption>Biometric and RFID access control systems for businesses in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/boom_barrier_premium_v2.png</image:loc>
+      <image:title>Boom Barrier</image:title>
+      <image:caption>High-speed vehicle access control for residential and commercial hubs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/smart_glass_whatsapp.jpg</image:loc>
+      <image:title>Smart Glass</image:title>
+      <image:caption>Switchable privacy glass for offices and residences in Kozhikode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/service_networking_it_1776113951075.png</image:loc>
+      <image:title>Network Infrastructure</image:title>
+      <image:caption>Wi-Fi 6 coverage, server setups, and IT infrastructure solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/epabx_system_3d_v2_1776682281774.png</image:loc>
+      <image:title>EPABX System</image:title>
+      <image:caption>Professional telecommunication networks for business connectivity</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/security_alarm_premium.png</image:loc>
+      <image:title>Security Alarm System</image:title>
+      <image:caption>Integrated alarm systems, smoke detectors, and break-in sensors</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/service_solar_image_1776113086224.png</image:loc>
+      <image:title>Solar Power System</image:title>
+      <image:caption>Rooftop solar panel installation for sustainable energy in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/service_solar_cleaning_1776114009525.png</image:loc>
+      <image:title>Automatic Solar Cleaning System</image:title>
+      <image:caption>Automated solar panel cleaning robots for maintaining efficiency</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/service_mist_cooling_1776113994876.png</image:loc>
+      <image:title>Mist Cooling System</image:title>
+      <image:caption>Advanced outdoor cooling systems for gardens and restaurants</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/stretch_ceiling_new.jpg</image:loc>
+      <image:title>Stretch Ceiling System</image:title>
+      <image:caption>Elegant ceiling solutions with glossy, matte, or translucent finishes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/egate_system.png</image:loc>
+      <image:title>E-gate System</image:title>
+      <image:caption>Electronic gate systems with smart card or biometric integration</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/security_bollard.png</image:loc>
+      <image:title>Security Bollard</image:title>
+      <image:caption>Automatic retractable security bollards for vehicle traffic control</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/parking_lock_remote.png</image:loc>
+      <image:title>Automatic Parking Lock</image:title>
+      <image:caption>Remote control parking lock for private parking space protection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/home_theatre_premium.png</image:loc>
+      <image:title>Home Theatre</image:title>
+      <image:caption>Premium cinematic experience with surround sound and smart lighting</image:caption>
     </image:image>
   </url>
-  
-  <!-- About Page -->
+
+  <!-- ==================== -->
+  <!-- About Page            -->
+  <!-- ==================== -->
   <url>
     <loc>https://www.hogoinnovations.com/about.html</loc>
     <lastmod>2026-06-14</lastmod>
@@ -38,32 +178,58 @@
     <image:image>
       <image:loc>https://www.hogoinnovations.com/assets/images/home_automation_about.png</image:loc>
       <image:title>About Hogo Innovations</image:title>
-      <image:caption>Pioneering the Smart Revolution in Kozhikode, Kerala - 6+ Years of Excellence</image:caption>
+      <image:caption>Pioneering the smart revolution in Kozhikode, Kerala - 6+ years of excellence in automation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/hogo_main_logo_transparent.png</image:loc>
+      <image:title>Hogo Innovations Logo</image:title>
+      <image:caption>Hogo Innovations - Smart Home Automation Company Kozhikode Kerala</image:caption>
     </image:image>
   </url>
-  
-  <!-- Contact Page -->
+
+  <!-- ==================== -->
+  <!-- Contact Page          -->
+  <!-- ==================== -->
   <url>
     <loc>https://www.hogoinnovations.com/contact.html</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/hogo_main_logo_transparent.png</image:loc>
+      <image:title>Contact Hogo Innovations</image:title>
+      <image:caption>Get in touch with Hogo Innovations for smart home automation consultation in Kozhikode Kerala</image:caption>
+    </image:image>
   </url>
-  
-  <!-- Brands Page -->
+
+  <!-- ==================== -->
+  <!-- Brands Page           -->
+  <!-- ==================== -->
   <url>
     <loc>https://www.hogoinnovations.com/brands.html</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/hogo_main_logo_transparent.png</image:loc>
+      <image:title>Hogo Innovations Brand Partners</image:title>
+      <image:caption>24+ global brand partners including Hikvision, Yale, Samsung, Schneider, and more</image:caption>
+    </image:image>
   </url>
-  
-  <!-- Testimonials Page -->
+
+  <!-- ==================== -->
+  <!-- Testimonials Page     -->
+  <!-- ==================== -->
   <url>
     <loc>https://www.hogoinnovations.com/testimonials.html</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.hogoinnovations.com/assets/images/hogo_main_logo_transparent.png</image:loc>
+      <image:title>Client Testimonials Hogo Innovations</image:title>
+      <image:caption>5-star rated client reviews for smart home automation and security services in Kozhikode Kerala</image:caption>
+    </image:image>
   </url>
-  
+
 </urlset>
