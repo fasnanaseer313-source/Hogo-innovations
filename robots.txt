@@ -22,4 +22,4 @@ Disallow: /*.py$
 Disallow: /Screenshots/
 
 # Sitemap
-Sitemap: https://hogoinnovations.com/sitemap.xml
+Sitemap: https://www.hogoinnovations.com/sitemap.xml
